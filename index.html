@@ -2,65 +2,871 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>National Jamboree Conservation Trail</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-            padding: 20px;
-            margin: 0;
-        }
+<title>National Jamboree Conservation Trail</title>
 
-        h1 {
-            font-size: 28px;
-        }
+<style>
 
-        .download-button {
-            display: inline-block;
-            background-color: #1b5e20;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-        }
+* {
+    box-sizing:border-box;
+}
 
-        .download-button:hover {
-            background-color: #2e7d32;
-        }
 
-        img {
-            margin-top: 30px;
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+body {
+
+    margin:0;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#e3c9a8;
+
+    color:#222;
+
+}
+
+
+
+/* ================= BRAND HEADER ================= */
+
+
+.brand-header {
+
+    background:white;
+
+    padding:25px 70px;
+
+    display:grid;
+
+    grid-template-columns:1fr auto 1fr;
+
+    align-items:center;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+
+}
+
+
+.brand-header img {
+
+    height:100px;
+
+    width:auto;
+
+}
+
+
+.brand-header img:first-child {
+    justify-self:end;
+}
+
+
+.brand-header img:last-child {
+    margin-left:75px; 
+    justify-self:start;
+}
+
+
+
+.brand-text {
+
+    text-align:center;
+
+    padding:0 50px;
+
+}
+
+
+
+.presented {
+
+    color:#666;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+
+}
+
+
+
+.brand-text h1 {
+
+    margin:10px 0;
+
+    color:#a51c30;
+
+    font-size:32px;
+
+}
+
+
+
+.brand-text h2 {
+
+    margin:0;
+
+    color:#133e1b;
+
+    font-size:22px;
+
+    font-weight:normal;
+
+}
+
+
+
+
+
+/* ================= HERO ================= */
+
+
+.hero {
+
+    max-width:1200px;
+
+    margin:35px auto;
+
+}
+
+
+.hero img {
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    border-radius:15px;
+
+}
+
+
+
+
+/* ================= MAIN CONTENT ================= */
+
+
+.container {
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+
+
+.intro {
+
+    font-size:21px;
+
+    line-height:1.6;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+
+
+
+
+/* ================= DOWNLOAD ================= */
+
+
+.downloads {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    margin:40px 0;
+
+}
+
+
+
+.download-button {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 35px;
+
+    border-radius:18px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+
+    transition:.2s;
+
+}
+
+
+
+.download-button:hover {
+
+    transform:translateY(-5px);
+
+}
+
+
+
+.android {
+
+    background:linear-gradient(135deg,#43a047,#1b5e20);
+
+}
+
+
+
+.apple {
+
+    background:linear-gradient(135deg,#555,#111);
+
+}
+
+
+
+.button-icon {
+
+    font-size:40px;
+
+}
+
+
+
+.button-info {
+
+    text-align:left;
+
+}
+
+
+
+.button-small {
+
+    font-size:13px;
+
+}
+
+
+
+.button-large {
+
+    font-size:25px;
+
+}
+
+
+
+
+
+/* ================= FEATURE ================= */
+
+
+.section-title {
+
+    margin-top:60px;
+
+    color:#133e1b;
+
+    font-size:32px;
+
+}
+
+
+
+.feature {
+
+    width:100%;
+
+    max-width:1024px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+
+}
+
+
+
+
+
+/* ================= SCREENSHOTS ================= */
+
+
+.screenshots {
+
+    display:flex;
+
+    gap:25px;
+
+    overflow-x:auto;
+
+    padding:20px 0;
+
+}
+
+
+
+.screenshots img {
+
+    width:250px;
+
+    flex-shrink:0;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+
+
+
+
+/* ================= ANDROID HELP ================= */
+
+
+.android-help {
+
+    margin-top:60px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+    text-align:left;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+
+
+.android-help img {
+
+    width:250px;
+
+}
+
+
+
+.android-help h2 {
+
+    color:#1b5e20;
+
+}
+
+
+
+.android-help li {
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+/* ================= FOOTER ================= */
+
+
+footer {
+
+    margin-top:60px;
+
+    background:#1b5e20;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+
+
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:700px){
+
+
+    .brand-header {
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+        justify-items:center;
+
+        padding:25px;
+
+    }
+
+
+    .brand-header img:first-child,
+    .brand-header img:last-child {
+
+        justify-self:center;
+
+    }
+
+
+    .brand-text {
+
+        padding:0;
+
+    }
+
+
+
+    .brand-header img {
+
+        height:80px;
+
+    }
+
+
+    .brand-text h1 {
+
+        font-size:25px;
+
+    }
+
+
+
+    .hero {
+
+        height:260px;
+
+        margin:20px;
+
+    }
+
+
+
+    .hero-overlay h1 {
+
+        font-size:30px;
+
+    }
+
+
+
+    .hero-overlay p {
+
+        font-size:16px;
+
+    }
+
+
+
+    .download-button {
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+
+
+    .android-help {
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+
+    .android-help div {
+
+        text-align:left;
+
+    }
+
+
+}
+
+
+</style>
 
 </head>
 
+
+
 <body>
 
-    <h1>
-        Still working on this. Check back soon!
-    </h1>
 
-    <p>
-        In the meantime, download the National Jamboree Conservation Trail app:
-    </p>
 
-    <a class="download-button"
-       href="https://github.com/lesparza216/National-Jamboree-Conservation-Trail/releases/download/APK/NSJ26-Conservation-Trail.apk">
-        Download Android App
-    </a>
+<!-- BRANDING -->
 
-    <br>
 
-    <img src="photos/WORKING.jpg" alt="Website under construction">
+<div class="brand-header">
+
+
+<img src="photos/ENST_logo.png"
+alt="ENST Logo">
+
+
+
+<div class="brand-text">
+
+
+<div class="presented">
+PRESENTED BY
+</div>
+
+
+<h1>
+University of Maryland
+</h1>
+
+
+<h2>
+Environmental Science & Technology
+</h2>
+
+
+</div>
+
+
+
+<img src="photos/Firefly_RemoveBackground.png"
+alt="App Logo">
+
+
+</div>
+
+
+
+
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <img src="photos/Banner.jpg"
+         alt="National Jamboree Conservation Trail Banner">
+
+</section>
+
+
+
+
+
+
+
+<div class="container">
+
+
+
+<p class="intro">
+
+Download the official National Jamboree Conservation Trail app. 
+Explore the trail, scan QR codes, and collect badges throughout the National Jamboree experience.
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="section-title">
+Discover the Conservation Trail App
+</h2>
+
+
+
+<img class="feature"
+src="photos/feature.png"
+alt="Feature Graphic">
+
+
+
+
+
+
+
+<h2 class="section-title">
+App Preview
+</h2>
+
+
+
+<div class="screenshots">
+
+
+<img src="photos/App_Screenshot1.jpg">
+
+<img src="photos/App_Screenshot2.jpg">
+
+<img src="photos/App_Screenshot3.jpg">
+
+<img src="photos/App_Screenshot4.png">
+
+
+</div>
+
+
+
+
+<div class="downloads">
+
+
+<a class="download-button android"
+href="https://github.com/lesparza216/National-Jamboree-Conservation-Trail/releases/latest/download/NSJ26-Conservation-Trail.apk">
+
+
+<span class="button-icon">🤖</span>
+
+
+<div class="button-info">
+
+<div class="button-small">
+DOWNLOAD FOR
+</div>
+
+
+<div class="button-large">
+Android
+</div>
+
+
+</div>
+
+
+</a>
+
+
+
+
+<a class="download-button apple"
+href="INSERT_APP_STORE_LINK">
+
+
+<span class="button-icon">🍏</span>
+
+
+<div class="button-info">
+
+<div class="button-small">
+DOWNLOAD ON
+</div>
+
+
+<div class="button-large">
+iPhone
+</div>
+
+
+</div>
+
+
+</a>
+
+
+
+</div>
+
+
+<!-- ANDROID INSTALLATION -->
+
+<div class="android-help">
+
+
+<img src="photos/Helper.png"
+alt="Android Installation">
+
+
+<div>
+
+
+<h2>
+Ready to Begin Your Adventure?
+</h2>
+
+
+<p>
+
+The National Jamboree Conservation Trail app is available through the Apple App Store for iOS devices. 
+Android users can download the app directly from this website, as it is not currently available through Google Play.
+
+</p>
+
+
+<h3>
+How to Install the Android App
+</h3>
+
+
+<ol>
+
+
+<li>
+
+Press the <b>Download Android</b> button above.
+
+</li>
+
+
+<li>
+
+Wait for the APK file to finish downloading.
+You can find it by opening the <b>Downloads</b> folder in Chrome.
+
+</li>
+
+
+<li>
+
+Open the downloaded file:
+
+<br>
+
+<b>NSJ26-Conservation-Trail.apk</b>
+
+</li>
+
+
+<li>
+
+Android may display a security message about installing apps from
+outside the Google Play Store.
+
+<br><br>
+
+Select:
+
+<br>
+
+<b>Settings → Allow from this source</b>
+
+</li>
+
+
+<li>
+
+Return to the installation screen and press:
+
+<br>
+
+<b>Install</b>
+
+</li>
+
+
+<li>
+
+Once installation is complete, open the app and begin scanning QR codes
+to collect your badges!
+
+</li>
+
+
+</ol>
+
+
+
+
+<h3>
+Having Trouble?
+</h3>
+
+
+<ul>
+
+<li>
+Make sure you downloaded the APK completely before opening it.
+</li>
+
+
+<li>
+If installation is blocked, enable installation permission for Chrome.
+</li>
+
+
+<li>
+If you already installed an older version, remove it before installing
+the new version.
+</li>
+
+
+</ul>
+
+
+
+
+<p>
+
+<b>Note:</b> Allowing Chrome to install apps is only required once.
+Android will continue protecting your device normally after installation.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<footer>
+
+Official National Jamboree Conservation Trail App Distribution Page
+
+</footer>
+
+
 
 </body>
 
